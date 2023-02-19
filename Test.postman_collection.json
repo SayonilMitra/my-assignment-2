@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "dcaf4931-2f39-4df6-9f72-604d3a5af37b",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25827564"
+	},
+	"item": [
+		{
+			"name": "registerUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Raja Rai\", \r\n    \"email\": \"rajarai@gmail.com\", \r\n    \"password\": \"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loginUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"email\": \"rajarai@gmail.com\",\r\n    \"password\": \"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createPosts",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyUGFzc3dvcmQiOiIxMjM0NTY3ODkiLCJpYXQiOjE2NzY4MjEwMTh9.wWVP6gXJszlTwzfTPqnhRk8sHOUU6WmvaOhOKVnsbiQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"This is Raja Rai\",\r\n    \"body\" : \"Do whatever you like\",\r\n    \"image\": \"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetchPosts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loginUsers",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyUGFzc3dvcmQiOiIxMjM0NTY3ODkiLCJpYXQiOjE2NzY4MjEwMTh9.wWVP6gXJszlTwzfTPqnhRk8sHOUU6WmvaOhOKVnsbiQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"title\": \"Best view\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/posts/63f245ef366b73640ddbbd7d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"posts",
+						"63f245ef366b73640ddbbd7d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUsers",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyUGFzc3dvcmQiOiIxMjM0NTY3ODkiLCJpYXQiOjE2NzY4MjEwMTh9.wWVP6gXJszlTwzfTPqnhRk8sHOUU6WmvaOhOKVnsbiQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/posts/63f245ef366b73640ddbbd7d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"posts",
+						"63f245ef366b73640ddbbd7d"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
